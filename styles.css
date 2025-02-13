@@ -332,3 +332,72 @@ body {
     font-weight: bold;
     margin-bottom: 15px;
 }
+
+/* General Animation Settings */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Slide-up Effect */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scale-up Animation */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Apply Animations to Sections */
+.featured-property,
+.featured-listings,
+.cta-section,
+.footer {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Text Elements - Slide Up */
+h2, p {
+    animation: slideUp 1s ease-in-out;
+}
+
+/* Images - Scale Up */
+img {
+    animation: scaleUp 1s ease-in-out;
+}
+
+/* Button Hover Effect */
+.btn {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
